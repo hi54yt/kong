@@ -1,0 +1,60 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font: 300 15px/1.625 "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB", sans-serif;
+  font-size: 75.5%;
+  background-image: url(paper_fibers.png);
+  background-repeat: repeat;
+  background-position: top left;
+  color: #444;
+}
+
+#wrapper {
+  width: 878px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  height: 1%;
+}
+
+#header {
+  height: 100px;
+  background: url();
+}
+
+#content {
+  width: 530px;
+  padding: 15px 0;
+  float: left;
+}
+
+#sidebar {
+  width: 250px;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  float: right;
+  color: #777777;
+  .section {
+    margin: 0 0 40px 0;
+    padding: 15px 0;
+    background: transparent url(l.gif) no-repeat top left;
+  }
+  h2 {
+    margin: 0 0 .9em 0;
+    font-size: 1.3em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #666;
+  }
+}
+
+#footer {
+  padding: 10px 0;
+  clear: both;
+}
+
+hr {
+  display: none;
+}
