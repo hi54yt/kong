@@ -32,7 +32,8 @@ gem 'jbuilder', '~> 1.0.1'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano', group: :development
+gem 'capistrano', group: :development
+gem 'rvm-capistrano', group: :development
 
 # To use debugger
 # gem 'debugger'
