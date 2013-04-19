@@ -3,11 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   font: 300 15px/1.625 "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB", sans-serif;
-  font-size: 75.5%;
   background-image: image-url("paper_fibers.png");
   background-repeat: repeat;
   background-position: top left;
   color: #444;
+}
+
+a {
+color: #a8643b;
+text-decoration: none;
 }
 
 #wrapper {
@@ -19,8 +23,14 @@ body {
 }
 
 #header {
-  height: 100px;
+  height: 150px;
   background: url();
+  h1 {
+    margin-bottom: 0;
+  }
+  h2 {
+    margin-top: 0;
+  }
 }
 
 #content {
@@ -32,29 +42,40 @@ body {
 #sidebar {
   width: 250px;
   padding: 15px 20px;
-  font-size: 1.1em;
-  line-height: 1.5;
   float: right;
   color: #777777;
   .section {
+    font-size: 0.9em;
     margin: 0 0 40px 0;
     padding: 15px 0;
     background: transparent image-url("l.gif") no-repeat top left;
   }
-  h2 {
+  h1,h2,h3,h4,h5 {
     margin: 0 0 .9em 0;
-    font-size: 1.3em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: #666;
+    color: #777777;
   }
 }
 
 #footer {
   padding: 10px 0;
   clear: both;
+  font-size: 0.5em;
+  font-family: Helvetica;
+  color: #777777;
 }
 
 hr {
   display: none;
 }
+
+.post {
+  margin: 0 0 100px 0;
+  height: 1%;
+  p {
+    margin: 0 0 1.4em 0;
+    line-height: 1.65;
+  }
+}
+

@@ -1,45 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>知行合一</title>
-  </head>
-  <body>
-    <div id="wrapper">
-      <div id="header-wrapper">
-        <div id="header">
-          <h1>知行合一</h1>
-        </div>
-      </div>
-      
-      <hr>
-      
-      <div id="content">
-        <div id="post">
-          <h2>安装ruby运行环境的总结</h2>
-          <p>2013.3.28</p>
-          <p>因为换了服务器，需要重装ruby环境，以前都是对照着别人写的安装教程一步一步装的，今天自己装了一遍，遇到几个之前没遇到过的错误，总结如下：安装步奏千万不能打乱，安装ruby前必须安装好相关的lib，不然安装ruby编译的时候，会忽略掉这些lib，造成rails等程序的报错：比如openssl、zlib这些都要提前装好，不然会有下面的报错。</p>
-        </div>
-      </div>
-      
-      <hr>
-      
-      <div id="sidebar">
-        <div class="section">
-          <h2>分类</h2>
-          <p>未分类</p>
-        </div>
-        <div class="section">
-          <h2>SEARCH</h2>
-          <p>未分类</p>
-        </div>
-      </div>
-      
-      <hr>
-      
-      <div id="footer">
-        <p>Powered by Kong,a theme by YangTao.</p>
-      </div>
-    </div>
-  </body>
-</html>
+<div id="content">
+  <% @posts.each do |post| %>
+  <div class="post">
+    <h2><%= post.title %></h2>
+    <p><%= post.created_at.strftime('%Y.%m.%d').to_s %></p>
+    <%= post.content.html_safe %>
+  </div>
+  <% end %>
+</div>
+
+<hr>
+
+<div id="sidebar">
+  <div class="section">
+    <h3>关于</h3>
+    <p>我叫杨涛，这是我的个人博客。我喜欢做互联网产品、旅行、阅读、一切提高生产力的工具、极简主义。本博客前台借鉴了<a href="http://www.rodrigogalindez.com/themes/modernist/">modernist</a>，后台采用Ruby on Rails开发。</p>
+  </div>
+  <div class="section">
+    <h3>分类</h3>
+    <p></p>
+  </div>
+  <div class="section">
+    <h3>搜索</h3>
+  </div>
+</div>
+
+<hr>
+
+<div id="footer">
+  <p>Powered by Ruby on Rails, a theme by YangTao.</p>
+</div>
+
 

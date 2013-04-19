@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kong</title>
+  <title>YangTao's Blog</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="wrapper">
+  <div id="header-wrapper">
+    <div id="header">
+      <h1>YangTao's Blog</h1>
+    </div>
+  </div>
+  <hr>
+  <%= yield %>
+</div>
 </body>
 </html>
