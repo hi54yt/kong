@@ -10,8 +10,8 @@ body {
 }
 
 a {
-color: #a8643b;
-text-decoration: none;
+  color: #444;
+  text-decoration: none;
 }
 
 #wrapper {
@@ -45,7 +45,6 @@ text-decoration: none;
   float: right;
   color: #777777;
   .section {
-    font-size: 0.9em;
     margin: 0 0 40px 0;
     padding: 15px 0;
     background: transparent image-url("l.gif") no-repeat top left;
@@ -55,6 +54,9 @@ text-decoration: none;
     line-height: 1.4;
     text-transform: uppercase;
     color: #777777;
+  }
+  p {
+    font-size: .75em;
   }
 }
 

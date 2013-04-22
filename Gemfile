@@ -4,6 +4,10 @@ source 'http://ruby.taobao.org'
 gem 'rails', '4.0.0.beta1'
 gem 'mysql2'
 gem 'sqlite3'
+group :development, :test do
+  gem 'rspec-rails', '2.11.0'
+  gem 'capybara', '1.1.2'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
