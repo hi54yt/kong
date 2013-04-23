@@ -27,6 +27,7 @@ GEM
       tzinfo (~> 0.3.33)
     arel (4.0.0.beta2)
     atomic (1.1.8)
+    bcrypt-ruby (3.0.1)
     builder (3.1.4)
     capistrano (2.14.2)
       highline
@@ -159,6 +160,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   capistrano
   capybara (= 1.1.2)
   coffee-rails (~> 4.0.0.beta1)
