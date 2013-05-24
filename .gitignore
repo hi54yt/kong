@@ -20,3 +20,5 @@
 
 #Ignore the assets
 /public/assets/
+
+.rvmrc

@@ -2,7 +2,7 @@
   <% @posts.each do |post| %>
   <div class="post">
     <h2><%= post.title %></h2>
-    <p><%= Post by YangTao on #{post.created_at.strftime('%Y.%m.%d').to_s} %></p>
+    <p><%= "Post by YangTao on #{post.created_at.strftime('%Y.%m.%d').to_s}" %></p>
     <%= post.content.html_safe %>
   </div>
   <% end %>
@@ -13,7 +13,7 @@
 <div id="sidebar">
   <div class="section">
     <h3>关于</h3>
-    <p>杨涛，Geek。喜欢互联网、旅行、阅读、锻炼、极简主义。</p>
+    <p>杨涛，Geek。</p>
   </div>
   <!-- <div class="section">
     <h3>分类</h3>

@@ -1,1 +1,1 @@
-rvm gemset use blog
+rvm gemset use kong
