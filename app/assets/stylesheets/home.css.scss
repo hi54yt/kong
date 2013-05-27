@@ -75,7 +75,12 @@ clear: both;
     color: #777777;
   }
   p {
-    font-size: .75em;
+    a {
+      color: #666666;
+    }
+    a:hover{
+      color: #6699CC;
+    }
   }
 }
 
@@ -99,6 +104,7 @@ hr {
   height: 1%;
   .post-header{
       h2 {
+        margin-bottom: 0;
         a:hover{
           color: #6699CC;
         }
