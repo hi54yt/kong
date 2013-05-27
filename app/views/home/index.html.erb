@@ -2,7 +2,7 @@
   <% @posts.each do |post| %>
   <div class="post">
     <div class="post-header">
-      <h2><%= link_to post.title, post_path(post) %></h2>
+      <h2><%= link_to post.title, post %></h2>
     </div>
     <p><%= "Post by YangTao on #{post.created_at.strftime('%Y.%m.%d').to_s}" %></p>
     <%= markdown(post.content) %>

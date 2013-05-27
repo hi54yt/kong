@@ -1,15 +1,23 @@
 Kong::Application.routes.draw do
+  root to: 'home#index'
   get 'tags/:tag', to: 'home#index', as: :tag
-  get 'categories/:category', to: 'home#index', as: :category
-  get 'users/new'
+  get 'category/:category', to: 'home#index', as: :category
+
+  resources :users
   resources :posts
   resources :categories
+  resources :sessions, only: [:new, :create, :destroy]
+
+
+  get '/signup', to: 'users#new'
+  get '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'home#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

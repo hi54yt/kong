@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
+  layout "admin"
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
+  before_action :signed_in_user
   # GET /categories
   def index
     @categories = Category.all
