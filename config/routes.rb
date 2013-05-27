@@ -1,6 +1,9 @@
 Kong::Application.routes.draw do
-  get "users/new"
+  get 'tags/:tag', to: 'home#index', as: :tag
+  get 'categories/:category', to: 'home#index', as: :category
+  get 'users/new'
   resources :posts
+  resources :categories
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

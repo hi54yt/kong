@@ -10,11 +10,16 @@
 <div id="wrapper">
   <div id="header-wrapper">
     <div id="header">
-      <h1><%= link_to "YangTao's Blog", root_path %></h1>
+      <h1 id="logo"><%= link_to "YangTao's Blog", root_path %></h1>
     </div>
   </div>
   <hr>
   <%= yield %>
+  <hr>
+  <div id="footer">
+    <p>Powered by Ruby on Rails, a theme by YangTao.</p>
+    <p>陕ICP备13004285号-5</p>
+  </div>
 </div>
 </body>
 </html>

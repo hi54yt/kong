@@ -6,12 +6,16 @@ body {
   background-image: image-url("paper_fibers.png");
   background-repeat: repeat;
   background-position: top left;
-  color: #444;
+  color: #333333;
 }
 
 a {
-  color: #444;
+  color: #333333;
   text-decoration: none;
+}
+
+a:hover{
+  color: #6699CC;
 }
 
 #wrapper {
@@ -22,11 +26,26 @@ a {
   height: 1%;
 }
 
+#header-wrapper {
+height: 1%;
+clear: both;
+}
+
 #header {
-  height: 150px;
-  background: url();
+  height: 255px;
   h1 {
-    margin-bottom: 0;
+    background: transparent image-url("guy.png") no-repeat center;
+    height: 177px;
+    a{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-decoration: none;
+    border: 0 none;
+    height: 177px;
+    width: 150px;
+    text-indent: -9999em;
+    }
   }
   h2 {
     margin-top: 0;
@@ -43,7 +62,7 @@ a {
   width: 250px;
   padding: 15px 20px;
   float: right;
-  color: #777777;
+  color: #666666;
   .section {
     margin: 0 0 40px 0;
     padding: 15px 0;
@@ -65,7 +84,10 @@ a {
   clear: both;
   font-size: 0.5em;
   font-family: Helvetica;
-  color: #777777;
+  color: #666666;
+  p {
+  text-align: center;
+  }
 }
 
 hr {
@@ -75,9 +97,16 @@ hr {
 .post {
   margin: 0 0 100px 0;
   height: 1%;
+  .post-header{
+      h2 {
+        a:hover{
+          color: #6699CC;
+        }
+    }
+  }
+
   p {
     margin: 0 0 1.4em 0;
     line-height: 1.65;
   }
 }
-

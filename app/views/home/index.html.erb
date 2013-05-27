@@ -1,9 +1,11 @@
 <div id="content">
   <% @posts.each do |post| %>
   <div class="post">
-    <h2><%= post.title %></h2>
+    <div class="post-header">
+      <h2><%= link_to post.title, post_path(post) %></h2>
+    </div>
     <p><%= "Post by YangTao on #{post.created_at.strftime('%Y.%m.%d').to_s}" %></p>
-    <%= post.content.html_safe %>
+    <%= markdown(post.content) %>
   </div>
   <% end %>
 </div>
@@ -12,22 +14,19 @@
 
 <div id="sidebar">
   <div class="section">
-    <h3>关于</h3>
-    <p>杨涛，Geek。</p>
-  </div>
-  <!-- <div class="section">
-    <h3>分类</h3>
-    <p></p>
+    <h3>About</h3>
+    <p>A web and iOS app development blog by YangTao.</p>
   </div>
   <div class="section">
-    <h3>搜索</h3>
-  </div> -->
+    <h3>Categories</h3>
+    <% @categories.each do |category| %>
+    <p><%= link_to category.name, category_path(category.name) %></p>
+    <% end %>
+  </div>
+  <div class="section">
+    <h3>Tags</h3>
+    <% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+    <% end %>
+  </div>
 </div>
-
-<hr>
-
-<div id="footer">
-  <p>Powered by Ruby on Rails, a theme by YangTao.</p>
-</div>
-
-
