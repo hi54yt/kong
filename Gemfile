@@ -32,6 +32,7 @@ gem 'bcrypt-ruby'
 gem 'coderay'
 gem 'redcarpet'
 gem 'acts-as-taggable-on'
+gem 'sass'
 gem 'bootstrap-sass'
 
 
