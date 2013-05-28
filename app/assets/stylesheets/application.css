@@ -9,8 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require coderay
- *= require home
+ *= require_tree .
  */
  #tag_cloud {
   width: 400px;
