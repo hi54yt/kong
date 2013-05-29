@@ -4,14 +4,19 @@ Kong::Application.routes.draw do
   get 'category/:category', to: 'home#index', as: :category
 
   resources :users
-  resources :posts
-  resources :categories
+  resources :posts, only: [:show]
   resources :sessions, only: [:new, :create, :destroy]
 
 
   get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+
+  namespace :admin do
+    get '/', to: 'posts#index'
+    resources :posts, :except => [:show]
+    resources :categories
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

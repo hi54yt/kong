@@ -6,8 +6,9 @@ class HomeController < ApplicationController
     else
       @posts = Post.all
     end
-      @posts = @posts.order("created_at DESC")
-      @categories = Category.all
+    
+    @posts = @posts.order("created_at DESC")
+    @categories = Category.all
   end
 
 end
