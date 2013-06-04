@@ -1,4 +1,6 @@
+require 'grape'
 Kong::Application.routes.draw do
+  mount Kong::API => "/"
   root to: 'home#index'
   get 'tags/:tag', to: 'home#index', as: :tag
   get 'category/:category', to: 'home#index', as: :category
@@ -6,7 +8,6 @@ Kong::Application.routes.draw do
   resources :users
   resources :posts, only: [:show]
   resources :sessions, only: [:new, :create, :destroy]
-
 
   get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'

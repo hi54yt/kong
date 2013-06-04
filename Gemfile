@@ -1,4 +1,4 @@
-source 'http://ruby.taobao.org'
+source 'https://rubygems.org/'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.rc1'
@@ -34,8 +34,7 @@ gem 'redcarpet'
 gem 'acts-as-taggable-on'
 gem 'sass'
 gem 'bootstrap-sass'
-
-
+gem 'grape'
 # Deploy with Capistrano
 # gem 'capistrano', group: :development
 # gem 'rvm-capistrano', group: :development

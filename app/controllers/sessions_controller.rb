@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   layout "admin" 
 	def new
   end
@@ -7,7 +8,10 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       sign_in user
-      redirect_to admin_posts_path
+      respond_to do |format|
+        format.html { redirect_to admin_posts_path }
+        format.json { render :status => '201', :json => user.as_json(:only => [:remember_token]) }
+      end
     else
       flash.now[:error] = 'Invalid email/password combination'
       render 'new'
